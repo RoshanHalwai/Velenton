@@ -51,9 +51,9 @@
                         style="@style/Base.TextAppearance.AppCompat.Large"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/copy"
                         android:drawableRight="@drawable/copy"
-                        android:padding="5dp"
-                        android:text="Product Code :- V-3716" />
+                        android:padding="5dp" />
 
                     <TextView
                         android:id="@+id/productDescription"
@@ -83,6 +83,7 @@
                         android:layout_gravity="center"
                         android:background="@android:color/holo_blue_light"
                         android:drawableLeft="@drawable/avatar"
+                        android:drawableStart="@drawable/avatar"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="@string/supplier"
@@ -94,7 +95,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="5dp"
-                        android:text="Velenton"
+                        android:text="@string/velenton"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -115,7 +116,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
-                                android:text="Price : Rs. 533 /-"
                                 android:textColor="@android:color/holo_green_dark" />
 
                             <TextView
@@ -123,8 +123,7 @@
                                 style="@style/Base.TextAppearance.AppCompat.Small"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="5dp"
-                                android:text="Shipping : Rs 75" />
+                                android:padding="5dp" />
 
                             <TextView
                                 android:id="@+id/returnAccepted"
@@ -132,9 +131,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:drawableLeft="@drawable/checked"
+                                android:drawableStart="@drawable/checked"
                                 android:gravity="center"
                                 android:padding="5dp"
-                                android:text="Return Accepted"
                                 android:textAlignment="center"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -150,16 +149,14 @@
                                 style="@style/Base.TextAppearance.AppCompat.Small"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="5dp"
-                                android:text="Available in Free size" />
+                                android:padding="5dp" />
 
                             <TextView
                                 android:id="@+id/dispatchTime"
                                 style="@style/Base.TextAppearance.AppCompat.Small"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="5dp"
-                                android:text="Dispatched in 2-3 Days" />
+                                android:padding="5dp" />
 
                             <TextView
                                 android:id="@+id/cashOnDelivery"
@@ -167,9 +164,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:drawableLeft="@drawable/multiply"
+                                android:drawableStart="@drawable/multiply"
                                 android:gravity="center"
                                 android:padding="5dp"
-                                android:text="No COD Available"
                                 android:textAlignment="center"
                                 android:textStyle="bold" />
 
