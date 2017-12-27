@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Velenton</string>
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Catalog</string>
+    <string name="tab_text_3">Categories</string>
+    <string name="tab_text_4">Cart</string>
+    <string name="tab_text_5">More</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="share_catalog">Share Catalog</string>
+    <string name="other_share">Other Share</string>
+    <string name="copy_text">Copy details of product</string>
+    <string name="view_product">View Product</string>
+    <string name="share">Share</string>
+    <string name="sub_product_description">Sub Product under each catalog</string>
+    <string name="product_description">Product Catalog Image</string>
+    <string name="my_order">My Order</string>
+    <string name="my_order_image">My Order Image</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="equal">=</string>
+    <string name="percent">%</string>
+    <string name="plus">+</string>
+    <string name="set_profit_margin">Set your Profit Margin</string>
+    <string name="supplier">SUPPLIER</string>
+    <string name="add_to_cart">Add to Cart</string>
+</resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "262909170937",
+    "firebase_url": "https://ashatextiledemo.firebaseio.com",
+    "project_id": "ashatextiledemo",
+    "storage_bucket": "ashatextiledemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262909170937:android:98d4cdb588de58fb",
+        "android_client_info": {
+          "package_name": "com.example.rhalwai.velenton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262909170937-03mq05ua7okhm1bojo8nm1ua3rdvjul3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz1-ZfusSpP3Ncsl5n6Z2oLksbtVxdJmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
