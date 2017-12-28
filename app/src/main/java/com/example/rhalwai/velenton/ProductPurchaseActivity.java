@@ -50,6 +50,16 @@ public class ProductPurchaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_purchase);
 
+        setToolbar();
+
+        getDetailsFromPreviousActivity();
+
+        initializeUIComponents();
+
+        setListenerForUIComponents();
+    }
+
+    private void setToolbar() {
         Toolbar myToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -59,17 +69,15 @@ public class ProductPurchaseActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
 
+    private void getDetailsFromPreviousActivity() {
         if (getIntent().getExtras() != null) {
             productDetails = (ProductDetails) getIntent().getExtras().get("ProductDescription");
             strProductCode = getIntent().getExtras().getString("ProductCode");
             strProductImageURI = getIntent().getExtras().getString("ProductImageURI");
             strProductPrice = getIntent().getExtras().getString("ProductPrice");
         }
-
-        initializeUIComponents();
-
-        setListenerForUIComponents();
     }
 
     private void setListenerForUIComponents() {
@@ -104,10 +112,10 @@ public class ProductPurchaseActivity extends AppCompatActivity {
     }
 
     private void setProductDetails() {
-        productPrice.setText("Price : Rs. " + strProductPrice + " /-");
-        shippingPrice.setText("Shipping : " + "Rs. 75 /-");
+        productPrice.setText(new StringBuilder().append("Price : Rs. ").append(strProductPrice).append(" /-").toString());
+        shippingPrice.setText(new StringBuilder().append("Shipping : ").append("Rs. 75 /-").toString());
         returnAccepted.setText("Return Accepted");
-        productAvailability.setText("Available in " + productDetails.getAvailability());
+        productAvailability.setText(new StringBuilder().append("Available in ").append(productDetails.getAvailability()).toString());
         dispatchTime.setText("Dispatched in 2-3 Days");
         cashOnDelivery.setText("No COD Available");
     }
@@ -145,4 +153,5 @@ public class ProductPurchaseActivity extends AppCompatActivity {
         super.onBackPressed();
         startActivity(new Intent(getApplicationContext(), SubProductActivity.class));
     }
+
 }
