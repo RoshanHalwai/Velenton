@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,15 +36,17 @@ public class ProductPurchaseActivity extends AppCompatActivity {
     TextView productAvailability;
     TextView dispatchTime;
     TextView cashOnDelivery;
+    ImageView productImage;
+    Button addToCart, share;
 
     ProductDetails productDetails;
     String strProductCode;
     String strProductImageURI;
     String strProductPrice;
-    ImageView productImage;
 
     private ClipboardManager myClipboard;
     private ClipData myClip;
+    HomeTab1 homeTab1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +55,11 @@ public class ProductPurchaseActivity extends AppCompatActivity {
 
         setToolbar();
 
-        getDetailsFromPreviousActivity();
+        getDataFromPreviousActivity();
 
         initializeUIComponents();
+
+        homeTab1 = new HomeTab1();
 
         setListenerForUIComponents();
     }
@@ -71,7 +76,7 @@ public class ProductPurchaseActivity extends AppCompatActivity {
         });
     }
 
-    private void getDetailsFromPreviousActivity() {
+    private void getDataFromPreviousActivity() {
         if (getIntent().getExtras() != null) {
             productDetails = (ProductDetails) getIntent().getExtras().get("ProductDescription");
             strProductCode = getIntent().getExtras().getString("ProductCode");
@@ -92,6 +97,20 @@ public class ProductPurchaseActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+
+        addToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                homeTab1.showProfitMarginDialogBox(Integer.valueOf(strProductPrice), ProductPurchaseActivity.this);
+            }
+        });
     }
 
     private void initializeUIComponents() {
@@ -105,6 +124,9 @@ public class ProductPurchaseActivity extends AppCompatActivity {
         productAvailability = findViewById(R.id.productAvailability);
         dispatchTime = findViewById(R.id.dispatchTime);
         cashOnDelivery = findViewById(R.id.cashOnDelivery);
+
+        addToCart = findViewById(R.id.addToCart);
+        share = findViewById(R.id.share);
 
         setProductCodeAndDescription();
         setProductImage();
